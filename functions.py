@@ -1,5 +1,4 @@
 from streamlit.components.v1 import html
-import streamlit
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 import matplotlib.pyplot as plt
