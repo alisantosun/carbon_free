@@ -11,7 +11,7 @@ from PIL import Image, ImageDraw, ImageFont
 import base64
 from functions import *
 
-st.set_page_config(layout="wide",page_title="Carbon Footprint Calculator", page_icon="./media/favicon.ico")
+st.set_page_config(layout="wide",page_title="KArbon Ayak İzi Hesaplayıcı", page_icon="./media/favicon.ico")
 
 def get_base64(bin_file):
     with open(bin_file, 'rb') as f:
@@ -39,7 +39,7 @@ with open("./style/main.txt", "r", encoding="utf-8") as main_page:
     main.markdown(f"""{main_page.read()}""")
 
 _,but,_ = main.columns([1,2,1])
-if but.button("Calculate Your Carbon Footprint!", type="primary"):
+if but.button("KarbonAyak İzini Hesapla!", type="primary"):
     click_element('tab-1')
 
 tab1, tab2, tab3, tab4, tab5 = comps.tabs(["👴 Personal","🚗 Travel","🗑️ Waste","⚡ Energy","💸 Consumption"])
@@ -146,9 +146,9 @@ _,col2,_ = comps.columns([1,10,1])
 col2.markdown(pop_button, unsafe_allow_html=True)
 pop = """
 <div id="popup" class="DidYouKnow_root">
-<p class="DidYouKnow_title TextNew" style="font-size: 20px;"> ❔ Did you know</p>
+<p class="DidYouKnow_title TextNew" style="font-size: 20px;"> ❔ Bunu Biliyor Muydunuz </p>
     <p id="popupText" class="DidYouKnow_content TextNew"><span>
-    Each year, human activities release over 40 billion metric tons of carbon dioxide into the atmosphere, contributing to climate change.
+    Her yıl, insan faaliyetleri atmosfere 40 milyar metrik tondan fazla karbondioksit salarak iklim değişikliğine neden olur.
     </span></p>
 </div>
 """
