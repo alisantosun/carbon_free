@@ -42,7 +42,7 @@ _,but,_ = main.columns([1,2,1])
 if but.button("Karbon Ayak İzini Hesapla!", type="primary"):
     click_element('tab-1')
 
-tab1, tab2, tab3, tab4, tab5 = comps.tabs(["👴 Personal","🚗 Travel","🗑️ Waste","⚡ Energy","💸 Consumption"])
+tab1, tab2, tab3, tab4, tab5 = comps.tabs(["👴 Kişisel","🚗 Seyahat","🗑️ Atık","⚡ Enerji","💸 Tüketim"])
 tab_result,_ = result.tabs([" "," "])
 
 def component():
@@ -52,15 +52,15 @@ def component():
     if (weight is None) or (weight == 0) : weight = 1
     if (height is None) or (height == 0) : height = 1
     calculation = weight / (height/100)**2
-    body_type = "underweight" if (calculation < 18.5) else \
+    body_type = "zayıf" if (calculation < 18.5) else \
                  "normal" if ((calculation >=18.5) and (calculation < 25 )) else \
-                 "overweight" if ((calculation >= 25) and (calculation < 30)) else "obese"
-    sex = tab1.selectbox('Gender', ["female", "male"])
-    diet = tab1.selectbox('Diet', ['omnivore', 'pescatarian', 'vegetarian', 'vegan'], help="""
-                                                                                              Omnivore: Eats both plants and animals.\n
-                                                                                              Pescatarian: Consumes plants and seafood, but no other meat\n
-                                                                                              Vegetarian: Diet excludes meat but includes plant-based foods.\n
-                                                                                              Vegan: Avoids all animal products, including meat, dairy, and eggs.""")
+                 "obez" if ((calculation >= 25) and (calculation < 30)) else "obese"
+    sex = tab1.selectbox('Gender', ["bayan", "erkek"])
+    diet = tab1.selectbox('Diet', ['hepçil', 'pesketaryan', 'vegeteryan', 'vegan'], help="""
+                                                                                              Omnivor: Hem bitki hem de hayvan tüketir.\n
+                                                                                              Peskatarian: Bitkileri ve deniz ürünlerini tüketir, ancak başka et yemez.\n
+                                                                                              Vejetaryen: Diyeti et içermez, ancak bitki bazlı yiyecekler içerir.\n
+                                                                                              Vegan: Et, süt ürünleri ve yumurta dahil olmak üzere tüm hayvansal ürünlerden kaçınır.""")
     social = tab1.selectbox('Social Activity', ['never', 'often', 'sometimes'], help="How often do you go out?")
 
     transport = tab2.selectbox('Transportation', ['public', 'private', 'walk/bicycle'],
