@@ -55,7 +55,7 @@ def component():
     body_type = "zayıf" if (calculation < 18.5) else \
                  "normal" if ((calculation >=18.5) and (calculation < 25 )) else \
                  "obez" if ((calculation >= 25) and (calculation < 30)) else "obese"
-    sex = tab1.selectbox('Gender', ["bayan", "erkek"])
+    sex = tab1.selectbox('Gender', ["female", "male"])
     diet = tab1.selectbox('Diet', ['omnivore', 'pescatarian', 'vegetarian', 'vegan'], help="""
                                                                                               Omnivore: Eats both plants and animals.\n
                                                                                               Pescatarian: Consumes plants and seafood, but no other meat\n
