@@ -11,7 +11,7 @@ from PIL import Image, ImageDraw, ImageFont
 import base64
 from functions import *
 
-st.set_page_config(layout="wide",page_title="Carbon Footprint Calculator", page_icon="./media/favicon.ico")
+st.set_page_config(layout="wide",page_title="Karbon Ayak İzi Hesaplayıcı", page_icon="./media/favicon.ico")
 
 def get_base64(bin_file):
     with open(bin_file, 'rb') as f:
@@ -39,7 +39,7 @@ with open("./style/main.txt", "r", encoding="utf-8") as main_page:
     main.markdown(f"""{main_page.read()}""")
 
 _,but,_ = main.columns([1,2,1])
-if but.button("Karbon Ayak İzini Hwsapla!", type="primary"):
+if but.button("Karbon Ayak İzini Hesapla!", type="primary"):
     click_element('tab-1')
 
 tab1, tab2, tab3, tab4, tab5 = comps.tabs(["👴 Personal","🚗 Travel","🗑️ Waste","⚡ Energy","💸 Consumption"])
