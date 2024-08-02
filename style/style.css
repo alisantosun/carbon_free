@@ -13,7 +13,7 @@ body {{
     font-size: 18px;
     
     }}
-    div[data-testid="StyledLinkIconContainer"]> a, div[data-testid="StyledLinkIconContainer"]> a > svg {{background-color: red ; stroke:red;}}
+    div[data-testid="StyledLinkIconContainer"]> a, div[data-testid="StyledLinkIconContainer"]> a > svg {{background-color: blue ; stroke:red;}}
     #popup {{
             display: none;
             background-color: #fff;
