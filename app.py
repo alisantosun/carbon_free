@@ -39,7 +39,7 @@ with open("./style/main.txt", "r", encoding="utf-8") as main_page:
     main.markdown(f"""{main_page.read()}""")
 
 _,but,_ = main.columns([1,2,1])
-if but.button("Calculate Your Carbon Footprint!", type="primary"):
+if but.button("Karbon Ayak İzini Hwsapla!", type="primary"):
     click_element('tab-1')
 
 tab1, tab2, tab3, tab4, tab5 = comps.tabs(["👴 Personal","🚗 Travel","🗑️ Waste","⚡ Energy","💸 Consumption"])
