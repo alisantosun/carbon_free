@@ -42,20 +42,20 @@ _,but,_ = main.columns([1,2,1])
 if but.button("KarbonAyak İzini Hesapla!", type="primary"):
     click_element('tab-1')
 
-tab1, tab2, tab3, tab4, tab5 = comps.tabs(["🧍‍♂️ kişisel","🚎 Seyahat","🚮 Atık","⚡ Enerji","💰 Tüketim"])
+tab1, tab2, tab3, tab4, tab5 = comps.tabs(["🧍‍♂️ Kişisel","🚎 Seyahat","🚮 Atık","⚡ Enerji","💰 Tüketim"])
 tab_result,_ = result.tabs([" "," "])
 
 def component():
     tab1col1, tab1col2 = tab1.columns(2)
-    height = tab1col1.number_input("Height",0,251, value=None, placeholder="160", help="in cm")
-    weight = tab1col2.number_input("Weight", 0, 250, value=None, placeholder="75", help="in kg")
-    if (weight is None) or (weight == 0) : weight = 1
-    if (height is None) or (height == 0) : height = 1
-    calculation = weight / (height/100)**2
-    body_type = "underweight" if (calculation < 18.5) else \
+    height = tab1col1.number_input("Boy",0,251, value=None, placeholder="160", help="in cm")
+    weight = tab1col2.number_input("Ağırlık", 0, 250, value=None, placeholder="75", help="in kg")
+    if (weight is None) or (Boy == 0) : weight = 1
+    if (height is None) or (Boy == 0) : height = 1
+    calculation = Ağırlık / (Boy/100)**2
+    body_type = "zayıf" if (calculation < 18.5) else \
                  "normal" if ((calculation >=18.5) and (calculation < 25 )) else \
-                 "overweight" if ((calculation >= 25) and (calculation < 30)) else "obese"
-    sex = tab1.selectbox('Gender', ["female", "male"])
+                 "obez" if ((calculation >= 25) and (calculation < 30)) else "obese"
+    sex = tab1.selectbox('cinsiyet', ["bayan", "erkek"])
     diet = tab1.selectbox('Diet', ['omnivore', 'pescatarian', 'vegetarian', 'vegan'], help="""
                                                                                               Omnivore: Eats both plants and animals.\n
                                                                                               Pescatarian: Consumes plants and seafood, but no other meat\n
