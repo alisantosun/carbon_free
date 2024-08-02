@@ -4,36 +4,37 @@ Küresel yıllık karbon ayak izi şimdi alarm verici bir şekilde 40 milyar ton
 
 🛠️ Proje Adımları
 🧩 Backend Geliştirme:
+
 Pandas ile Veri İşleme:
-
 Verilerin işlenmesi ve analizi için Pandas kullanıldı.
+
 Sayısal İşlemler için NumPy:
-
 Sayısal işlemler ve dizi manipülasyonu için NumPy kullanıldı.
+
 Makine Öğrenimi ile scikit-learn:
-
 Makine öğrenimi algoritmaları scikit-learn kullanılarak uygulandı.
+
 Giriş/Çıkış İşlemleri:
-
 Giriş/çıkış işlemleri için 'io' kütüphanesi kullanıldı.
+
 Veri Görselleştirme:
-
 Görselleştirmeler oluşturmak için Matplotlib kullanıldı.
+
 Pillow ile Görüntü İşleme:
-
 Görüntü işleme Pillow kütüphanesi kullanılarak uygulandı.
-Base64 Kodlama/Çözme:
 
+Base64 Kodlama/Çözme:
 İkili görüntü verilerini kodlamak ve çözmek için base64 kullanıldı.
+
 🖥️ Frontend Geliştirme:
 Streamlit Kurulumu:
-
 Web uygulaması oluşturmak için Streamlit kullanıldı.
+
 Kullanıcı Arayüzü Tasarımı:
-
 Streamlit bileşenleri, CSS ve Javascript kullanılarak sezgisel bir kullanıcı arayüzü tasarlandı.
-Test:
 
+Test:
 Hem backend hem de frontend bileşenlerinin doğru çalıştığından emin olmak için uygulamanın tamamı test edildi.
+
 👩‍🏫 Nasıl Kullanılır
 Öncelikle https://carbonfree.streamlit.app adresine girin. Streamlit'in politikası gereği uygulama uyku durumunda olabilir, lütfen uyanması için birkaç dakika bekleyin.
