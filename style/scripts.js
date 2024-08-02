@@ -11,12 +11,12 @@ function hidePopup() {
     window.parent.document.getElementById('button-17').style.display = 'block';
 };
 var texts = [
-"Her yıl, insan faaliyetleri atmosfere 40 milyar tCO₂'den fazla salmaktadır."
-"Bir kilogram sığır eti üretimi yaklaşık olarak 26 kgCO₂ emisyonuyla ilişkilidir."
-"Ulaşım sektörü, küresel CO₂ emisyonlarının neredeyse %25'ini oluşturur ve havacılık sektörü büyük bir katkıda bulunur."
-"Ormansızlaşma, küresel karbon emisyonlarının yaklaşık %10'una katkıda bulunur, ağaçlardaki depolanmış karbonun atmosfere salınmasına neden olur."
-"Ağaçlandırma girişimleri gibi bazı karbon dengeleme projeleri, birkaç on yıl içinde dönüm başına 20 tCO₂'ye kadar karbon tutabilir."
-"Elektrikli araç kullanmak, bireyin karbon ayak izini, geleneksel benzinli bir araba ile karşılaştırıldığında, yaklaşık %50 oranında azaltabilir."
+"Her yıl, insan faaliyetleri atmosfere 40 milyar tCO₂'den fazla salmaktadır.",
+"Bir kilogram sığır eti üretimi yaklaşık olarak 26 kgCO₂ emisyonuyla ilişkilidir.",
+"Ulaşım sektörü, küresel CO₂ emisyonlarının neredeyse %25'ini oluşturur ve havacılık sektörü büyük bir katkıda bulunur.",
+"Ormansızlaşma, küresel karbon emisyonlarının yaklaşık %10'una katkıda bulunur, ağaçlardaki depolanmış karbonun atmosfere salınmasına neden olur.",
+"Ağaçlandırma girişimleri gibi bazı karbon dengeleme projeleri, birkaç on yıl içinde dönüm başına 20 tCO₂'ye kadar karbon tutabilir.",
+"Elektrikli araç kullanmak, bireyin karbon ayak izini, geleneksel benzinli bir araba ile karşılaştırıldığında, yaklaşık %50 oranında azaltabilir.",
 "1 GB veri kullanıldığında yaklaşık 3 kgCO₂ üretilir ve Netflix'te HD kalitesinde bir film izlemek yaklaşık 4.5 kgCO₂ emisyonuna neden olur.",
 ];
 
