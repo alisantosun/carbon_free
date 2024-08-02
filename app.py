@@ -11,7 +11,7 @@ from PIL import Image, ImageDraw, ImageFont
 import base64
 from functions import *
 
-st.set_page_config(layout="wide",page_title="Karbon Ayak İzi Hesaplayıcı", page_icon="./media/favicon.ico")
+st.set_page_config(layout="wide",page_title="Karbon Ayak Izi Hesaplayıcı", page_icon="./media/favicon.ico")
 
 def get_base64(bin_file):
     with open(bin_file, 'rb') as f:
@@ -39,7 +39,7 @@ with open("./style/main.txt", "r", encoding="utf-8") as main_page:
     main.markdown(f"""{main_page.read()}""")
 
 _,but,_ = main.columns([1,2,1])
-if but.button("Karbon Ayak İzini Hesapla!", type="primary"):
+if but.button("Karbon Ayak Izini Hesapla!", type="primary"):
     click_element('tab-1')
 
 tab1, tab2, tab3, tab4, tab5 = comps.tabs(["👴 Personal","🚗 Travel","🗑️ Waste","⚡ Energy","💸 Consumption"])
@@ -90,7 +90,7 @@ def component():
 
     for_cooking = tab4.multiselect('What cooking systems do you use?', ['microwave', 'oven', 'grill', 'airfryer', 'stove'])
     energy_efficiency = tab4.selectbox('Do you consider the energy efficiency of electronic devices?', ['No', 'Yes', 'Sometimes' ])
-    daily_tv_pc = tab4.slider('How many hours a day do you spend in front of your PC/TV?', 0, 24, 0)
+    daily_tv_pc = tab4.number_input('How many hours a day do you spend in front of your PC/TV?', 0, 24,value=None,placeholder="2",help="in number" )
     internet_daily = tab4.number_input('What is your daily internet usage in hours?', 0, 24, value=None,placeholder="2",help="in number")
 
     shower = tab5.selectbox('How often do you take a shower?', ['daily', 'twice a day', 'more frequently', 'less frequently'])
