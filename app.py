@@ -11,7 +11,7 @@ from PIL import Image, ImageDraw, ImageFont
 import base64
 from functions import *
 
-st.set_page_config(layout="wide",page_title="KArbon Ayak İzi Hesaplayıcı", page_icon="./media/favicon.ico")
+st.set_page_config(layout="wide",page_title="Karbon Ayak İzi Hesaplayıcı", page_icon="./media/favicon.ico")
 
 def get_base64(bin_file):
     with open(bin_file, 'rb') as f:
@@ -140,7 +140,7 @@ if resultbutton.button(" ", type = "secondary"):
     tab_result.image(chart(model,ss, sample_df,prediction), use_column_width="auto")
     click_element('tab-2')
 
-pop_button = """<button id = "button-17" class="button-17" role="button"> ❔ Did You Know</button>"""
+pop_button = """<button id = "button-17" class="button-17" role="button"> ❔ Bunu Biliyor Muydunuz</button>"""
 _,home,_ = comps.columns([1,2,1])
 _,col2,_ = comps.columns([1,10,1])
 col2.markdown(pop_button, unsafe_allow_html=True)
