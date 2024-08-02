@@ -1,3 +1,9 @@
+python -m streamlit run app.py
+
+
+
+
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -42,7 +48,7 @@ _,but,_ = main.columns([1,2,1])
 if but.button("Karbon Ayak İzini Hesapla!", type="primary"):
     click_element('tab-1')
 
-tab1, tab2, tab3, tab4, tab5 = comps.tabs(["👴 Kişisel","🚗 Seyahat","🗑️ Atık","⚡ Enerji","💸 Tüketim"])
+tab1, tab2, tab3, tab4, tab5 = comps.tabs(["👴 Personal","🚗 Travel","🗑️ Waste","⚡ Energy","💸 Consumption"])
 tab_result,_ = result.tabs([" "," "])
 
 def component():
@@ -52,15 +58,15 @@ def component():
     if (weight is None) or (weight == 0) : weight = 1
     if (height is None) or (height == 0) : height = 1
     calculation = weight / (height/100)**2
-    body_type = "zayıf" if (calculation < 18.5) else \
+    body_type = "underweight" if (calculation < 18.5) else \
                  "normal" if ((calculation >=18.5) and (calculation < 25 )) else \
-                 "obez" if ((calculation >= 25) and (calculation < 30)) else "obese"
-    sex = tab1.selectbox('Gender', ["bayan", "erkek"])
-    diet = tab1.selectbox('Diet', ['hepçil', 'pesketaryan', 'vegeteryan', 'vegan'], help="""
-                                                                                              Omnivor: Hem bitki hem de hayvan tüketir.\n
-                                                                                              Peskatarian: Bitkileri ve deniz ürünlerini tüketir, ancak başka et yemez.\n
-                                                                                              Vejetaryen: Diyeti et içermez, ancak bitki bazlı yiyecekler içerir.\n
-                                                                                              Vegan: Et, süt ürünleri ve yumurta dahil olmak üzere tüm hayvansal ürünlerden kaçınır.""")
+                 "overweight" if ((calculation >= 25) and (calculation < 30)) else "obese"
+    sex = tab1.selectbox('Gender', ["female", "male"])
+    diet = tab1.selectbox('Diet', ['omnivore', 'pescatarian', 'vegetarian', 'vegan'], help="""
+                                                                                              Omnivore: Eats both plants and animals.\n
+                                                                                              Pescatarian: Consumes plants and seafood, but no other meat\n
+                                                                                              Vegetarian: Diet excludes meat but includes plant-based foods.\n
+                                                                                              Vegan: Avoids all animal products, including meat, dairy, and eggs.""")
     social = tab1.selectbox('Social Activity', ['never', 'often', 'sometimes'], help="How often do you go out?")
 
     transport = tab2.selectbox('Transportation', ['public', 'private', 'walk/bicycle'],
@@ -91,7 +97,7 @@ def component():
     for_cooking = tab4.multiselect('What cooking systems do you use?', ['microwave', 'oven', 'grill', 'airfryer', 'stove'])
     energy_efficiency = tab4.selectbox('Do you consider the energy efficiency of electronic devices?', ['No', 'Yes', 'Sometimes' ])
     daily_tv_pc = tab4.slider('How many hours a day do you spend in front of your PC/TV?', 0, 24, 0)
-    internet_daily = tab4.slider('What is your daily internet usage in hours?', 0, 24, 0)
+    internet_daily = tab4.number_input('What is your daily internet usage in hours?', 0, 24, value=None,placeholder="2",help="in number")
 
     shower = tab5.selectbox('How often do you take a shower?', ['daily', 'twice a day', 'more frequently', 'less frequently'])
     grocery_bill = tab5.slider('Monthly grocery spending in $', 0, 500, 0)
