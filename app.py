@@ -159,7 +159,7 @@ if home.button("🏡"):
 _,resultmid,_ = result.columns([1,2,1])
 
 tree_count = round(prediction / 411.4)
-tab_result.markdown(f"""<div style="color: red ;">You can consider the following suggestions to reduce your carbon footprint:                        
+tab_result.markdown(f"""<div style="color: red ;">You can consider the following suggestions to reduce your carbon footprint:</div>                        
 Reduce car usage, consider public transport or biking.                       
 Use energy-efficient light bulbs, make improvements to increase your home's energy efficiency.                      
 Reduce meat consumption, eat more plant-based foods. 
