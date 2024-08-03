@@ -11,13 +11,13 @@ function hidePopup() {
     window.parent.document.getElementById('button-17').style.display = 'block';
 };
 var texts = [
-"Her yıl, insan faaliyetleri atmosfere 40 milyar tCO₂'den fazla salmaktadır.",
-"Bir kilogram sığır eti üretimi yaklaşık olarak 26 kgCO₂ emisyonuyla ilişkilidir.",
-"Ulaşım sektörü, küresel CO₂ emisyonlarının neredeyse %25'ini oluşturur ve havacılık sektörü büyük bir katkıda bulunur.",
-"Ormansızlaşma, küresel karbon emisyonlarının yaklaşık %10'una katkıda bulunur, ağaçlardaki depolanmış karbonun atmosfere salınmasına neden olur.",
-"Ağaçlandırma girişimleri gibi bazı karbon dengeleme projeleri, birkaç on yıl içinde dönüm başına 20 tCO₂'ye kadar karbon tutabilir.",
-"Elektrikli araç kullanmak, bireyin karbon ayak izini, geleneksel benzinli bir araba ile karşılaştırıldığında, yaklaşık %50 oranında azaltabilir.",
-"1 GB veri kullanıldığında yaklaşık 3 kgCO₂ üretilir ve Netflix'te HD kalitesinde bir film izlemek yaklaşık 4.5 kgCO₂ emisyonuna neden olur.",
+"Each year, human activities release over 40 billion tCO₂ into the atmosphere.",
+    "The production of one kilogram of beef is associated with approximately 26 kgCO₂ emissions.",
+    "The transportation sector accounts for nearly 25% of global CO₂ emissions, with the aviation industry being a major contributor.",
+    "Deforestation contributes to about 10% of global carbon emissions, releasing stored carbon in trees into the atmosphere",
+    "Some carbon offset projects, like reforestation initiatives, can sequester up to 20 tCO₂ per acre over several decades.",
+    "Driving an electric vehicle can reduce an individual's carbon footprint by around 50% compared to a conventional gasoline-powered car.",
+    "Approximately 3 kgCO₂ is produced when using 1GB of data, and watching an HD-quality movie on Netflix causes approximately 4.5 kgCO₂ emissions.",
 ];
 
 function changeText() {
