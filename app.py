@@ -171,7 +171,6 @@ st.markdown(f"""
             alert('Your custom message goes here!');
         }}
     </script>
-""", unsafe_allow_html=True)
 
 if resultmid.button("  ", type="secondary"):
     click_element('tab-1')
@@ -181,5 +180,3 @@ with open("./style/footer.txt", "r", encoding="utf-8") as footer:
     st.markdown(footer_html, unsafe_allow_html=True)
 
 script()
-
-
