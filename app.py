@@ -159,11 +159,11 @@ if home.button("🏡"):
 _,resultmid,_ = result.columns([1,2,1])
 
 tree_count = round(prediction / 411.4)
-tab_result.markdown(f"""<div style="color: red ;">You can consider the following suggestions to reduce your carbon footprint:</div>                        
-Reduce car usage, consider public transport or biking.                       
-Use energy-efficient light bulbs, make improvements to increase your home's energy efficiency.                      
-Reduce meat consumption, eat more plant-based foods. 
-<b>{tree_count}</b> tree{'s' if tree_count > 1 else ''} monthly. <br> {f"<a href='https://www.tema.org.tr/fidan-bagisi-secenekleri/genel-amacli-sertifika-ingilizce' id = 'button-17' class='button-17' role='button'> 🌳 Proceed to offset 🌳</a>" if tree_count > 0 else ""}""",  unsafe_allow_html=True)
+tab_result.markdown(f"""<div style="color: red ;">You can consider the following suggestions to reduce your carbon footprint:</div>                                         
+Reduce car usage, consider public transport or biking.                                                             
+Use energy-efficient light bulbs, make improvements to increase your home's energy efficiency.                                                 
+Reduce meat consumption, eat more plant-based foods.                                  
+<b>{tree_count}</b> tree{'s' if tree_count > 1 else ''} monthly. <br> {f"<a href='fssdfsdfdsf' id = 'button-17' class='button-17' role='button'> 🌳 Proceed to offset 🌳</a>" if tree_count > 0 else ""}""",  unsafe_allow_html=True)
 
 if resultmid.button("  ", type="secondary"):
     click_element('tab-1')
