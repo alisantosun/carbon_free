@@ -11,7 +11,7 @@ from PIL import Image, ImageDraw, ImageFont
 import base64
 from functions import *
 
-st.set_page_config(layout="wide",page_title="Karbon Ayak İzi Hesaplayıcı", page_icon="./media/favicon.ico")
+st.set_page_config(layout="wide",page_title="Carbon Footprint Calculator", page_icon="./media/favicon.ico")
 
 def get_base64(bin_file):
     with open(bin_file, 'rb') as f:
@@ -39,10 +39,10 @@ with open("./style/main.txt", "r", encoding="utf-8") as main_page:
     main.markdown(f"""{main_page.read()}""")
 
 _,but,_ = main.columns([1,2,1])
-if but.button("Karbon Ayak İzini Hesapla!", type="primary"):
+if but.button("Calculate Your Carbon Footprint!", type="primary"):
     click_element('tab-1')
 
-tab1, tab2, tab3, tab4, tab5 = comps.tabs(["🧍‍♂️ Kişisel","🚎 Seyahat","🚮 Atık","⚡ Enerji","💰 Tüketim"])
+tab1, tab2, tab3, tab4, tab5 = comps.tabs(["👴 Personal","🚗 Travel","🗑️ Waste","⚡ Energy","💸 Consumption"])
 tab_result,_ = result.tabs([" "," "])
 
 def component():
@@ -50,7 +50,7 @@ def component():
     height = tab1col1.number_input("Height",0,251, value=None, placeholder="160", help="in cm")
     weight = tab1col2.number_input("Weight", 0, 250, value=None, placeholder="75", help="in kg")
     if (weight is None) or (weight == 0) : weight = 1
-    if (height is None) or (height == 0) : height =1
+    if (height is None) or (height == 0) : height = 1
     calculation = weight / (height/100)**2
     body_type = "underweight" if (calculation < 18.5) else \
                  "normal" if ((calculation >=18.5) and (calculation < 25 )) else \
@@ -140,15 +140,15 @@ if resultbutton.button(" ", type = "secondary"):
     tab_result.image(chart(model,ss, sample_df,prediction), use_column_width="auto")
     click_element('tab-2')
 
-pop_button = """<button id = "button-17" class="button-17" role="button"> ❔ Bunu Biliyor Muydunuz</button>"""
+pop_button = """<button id = "button-17" class="button-17" role="button"> ❔ Did You Know</button>"""
 _,home,_ = comps.columns([1,2,1])
 _,col2,_ = comps.columns([1,10,1])
 col2.markdown(pop_button, unsafe_allow_html=True)
 pop = """
 <div id="popup" class="DidYouKnow_root">
-<p class="DidYouKnow_title TextNew" style="font-size: 20px;"> ❔ Bunu Biliyor Muydunuz </p>
+<p class="DidYouKnow_title TextNew" style="font-size: 20px;"> ❔ Did you know</p>
     <p id="popupText" class="DidYouKnow_content TextNew"><span>
-    Her yıl, insan faaliyetleri atmosfere 40 milyar metrik tondan fazla karbondioksit salarak iklim değişikliğine neden olur.
+    Each year, human activities release over 40 billion metric tons of carbon dioxide into the atmosphere, contributing to climate change.
     </span></p>
 </div>
 """
@@ -169,3 +169,5 @@ with open("./style/footer.txt", "r", encoding="utf-8") as footer:
     st.markdown(footer_html, unsafe_allow_html=True)
 
 script()
+
+
