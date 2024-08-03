@@ -46,7 +46,7 @@ tab1, tab2, tab3, tab4, tab5 = comps.tabs(["🧍‍♂️ Kişisel","🚎 Seyaha
 tab_result,_ = result.tabs([" "," "])
 
 def component():
-        tab1col1, tab1col2 = tab1.columns(2)
+    tab1col1, tab1col2 = tab1.columns(2)
     height = tab1col1.number_input("Height",0,251, value=None, placeholder="160", help="in cm")
     weight = tab1col2.number_input("Weight", 0, 250, value=None, placeholder="75", help="in kg")
     if (weight is None) or (weight == 0) : weight = 1
