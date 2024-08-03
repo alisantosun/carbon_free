@@ -46,15 +46,11 @@ tab1, tab2, tab3, tab4, tab5 = comps.tabs(["🧍‍♂️ Kişisel","🚎 Seyaha
 tab_result,_ = result.tabs([" "," "])
 
 def component():
-    tab1col1, tab1col2 = tab1.columns(2)
+        tab1col1, tab1col2 = tab1.columns(2)
     height = tab1col1.number_input("Height",0,251, value=None, placeholder="160", help="in cm")
     weight = tab1col2.number_input("Weight", 0, 250, value=None, placeholder="75", help="in kg")
-    if height <= 0:
-    st.error("Height cannot be zero or negative.")
-    else return
-    if weight <= 0:
-    st.error("Weight cannot be zero or negative.")
-    else return
+    if (weight is None) or (weight == 0) : weight = 1
+    if (height is None) or (height == 0) : height =1
     calculation = weight / (height/100)**2
     body_type = "underweight" if (calculation < 18.5) else \
                  "normal" if ((calculation >=18.5) and (calculation < 25 )) else \
