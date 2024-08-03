@@ -93,7 +93,7 @@ body {{
     }}
     
     .DidYouKnow_content {{
-         color: rgb(35, 85, 69);
+         color: red;
          margin-top: 0.5rem;
          padding: 0px 1rem;
     }}
