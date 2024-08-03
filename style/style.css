@@ -87,7 +87,7 @@ body {{
     }}
     
     .DidYouKnow_title {{
-         color: rgb(55, 100, 99);
+         color: green ;
          margin: 0px;
          user-select: none;
     }}
