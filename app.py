@@ -159,10 +159,10 @@ if home.button("🏡"):
 _,resultmid,_ = result.columns([1,2,1])
 
 tree_count = round(prediction / 411.4)
-tab_result.markdown(f""You can consider the following suggestions to reduce your carbon footprint:                                       
+tab_result.markdown(f"""You can consider the following suggestions to reduce your carbon footprint:                                       
 Reduce car usage, consider public transport or biking.                                                             
 Use energy-efficient light bulbs, make improvements to increase your home's energy efficiency.                                                 
-Reduce meat consumption, eat more plant-based foods.                                  
+Reduce meat consumption, eat more plant-based foods."""                                  
 st.markdown(f"""
     <b>{tree_count}</b> tree{'s' if tree_count > 1 else ''} monthly. <br>
     {f"<a href='#' id='button-17' class='button-17' role='button' onclick='showMessage()'> 🌳 Proceed to offset 🌳</a>" if tree_count > 0 else ""}
