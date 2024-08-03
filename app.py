@@ -51,8 +51,10 @@ def component():
     weight = tab1col2.number_input("Weight", 0, 250, value=None, placeholder="75", help="in kg")
     if height <= 0:
     st.error("Height cannot be zero or negative.")
+    else return
     if weight <= 0:
     st.error("Weight cannot be zero or negative.")
+    else return
     calculation = weight / (height/100)**2
     body_type = "underweight" if (calculation < 18.5) else \
                  "normal" if ((calculation >=18.5) and (calculation < 25 )) else \
