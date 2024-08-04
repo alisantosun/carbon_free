@@ -106,7 +106,7 @@ if uploaded_file is not None:
     st.write(df)
 
     # Display some basic statistics
-    st.write(df.describe())
+    st.write(df.describe()))
     data = {'Body Type': body_type,
             "Sex": sex,
             'Diet': diet,
