@@ -44,16 +44,6 @@ if but.button("Calculate Your Carbon Footprint!", type="primary"):
     click_element('tab-1')
 
 tab1, tab2, tab3, tab4, tab5,tab6 = comps.tabs(["👴 Personal","🚗 Travel","🗑️ Waste","⚡ Energy","💸 Consumption","CSV Uploader"])
-uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
-if uploaded_file is not None:
-    # Read the CSV file
-    df = pd.read_csv(uploaded_file)
-
-    # Display the DataFrame
-    st.write(df)
-
-    # Display some basic statistics
-    st.write(df.describe())
 tab_result,_ = result.tabs([" "," "])
 
 def component():
@@ -107,7 +97,16 @@ def component():
     shower = tab5.selectbox('How often do you take a shower?', ['daily', 'twice a day', 'more frequently', 'less frequently'])
     grocery_bill = tab5.slider('Monthly grocery spending in $', 0, 500, 0)
     clothes_monthly = tab5.slider('How many clothes do you buy monthly?', 0, 30, 0)
+    uploaded_file = tab6.selectbox file_uploader("Choose a CSV file", type="csv")
+if uploaded_file is not None:
+    # Read the CSV file
+    df = pd.read_csv(uploaded_file)
 
+    # Display the DataFrame
+    st.write(df)
+
+    # Display some basic statistics
+    st.write(df.describe())
     data = {'Body Type': body_type,
             "Sex": sex,
             'Diet': diet,
