@@ -12,7 +12,8 @@ import base64
 from functions import *
 
 st.set_page_config(layout="wide",page_title="Carbon Footprint Calculator", page_icon="./media/favicon.ico")
-if uploaded_file is not None:
+uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
+    if uploaded_file is not None:
     # Read the CSV file
     df = pd.read_csv(uploaded_file)
 
