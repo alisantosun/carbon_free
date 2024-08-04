@@ -12,16 +12,7 @@ import base64
 from functions import *
 
 st.set_page_config(layout="wide",page_title="Carbon Footprint Calculator", page_icon="./media/favicon.ico")
-uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
-if uploaded_file is not None:
-    # Read the CSV file
-    df = pd.read_csv(uploaded_file)
 
-    # Display the DataFrame
-    st.write(df)
-
-    # Display some basic statistics
-    st.write(df.describe())
 
 def get_base64(bin_file):
     with open(bin_file, 'rb') as f:
@@ -51,7 +42,16 @@ with open("./style/main.txt", "r", encoding="utf-8") as main_page:
 _,but,_ = main.columns([1,2,1])
 if but.button("Calculate Your Carbon Footprint!", type="primary"):
     click_element('tab-1')
+uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
+if uploaded_file is not None:
+    # Read the CSV file
+    df = pd.read_csv(uploaded_file)
 
+    # Display the DataFrame
+    st.write(df)
+
+    # Display some basic statistics
+    st.write(df.describe())
 tab1, tab2, tab3, tab4, tab5 = comps.tabs(["👴 Personal","🚗 Travel","🗑️ Waste","⚡ Energy","💸 Consumption"])
 tab_result,_ = result.tabs([" "," "])
 
