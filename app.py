@@ -97,7 +97,7 @@ def component():
     shower = tab5.selectbox('How often do you take a shower?', ['daily', 'twice a day', 'more frequently', 'less frequently'])
     grocery_bill = tab5.slider('Monthly grocery spending in $', 0, 500, 0)
     clothes_monthly = tab5.slider('How many clothes do you buy monthly?', 0, 30, 0)
-    choose_a_CSV_file=tab6.selectbox("uploaded_file" = tab6.selectbox file_uploader("Choose a CSV file", type="csv")
+    choose_a_CSV_file=tab6.selectbox("uploaded_file" = file_uploader("Choose a CSV file", type="csv")
 if uploaded_file is not None:
     # Read the CSV file
     df = pd.read_csv(uploaded_file)
